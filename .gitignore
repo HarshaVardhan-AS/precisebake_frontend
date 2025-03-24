@@ -1,0 +1,11 @@
+# Node modules (if using React, Vue, etc.)
+node_modules/
+dist/
+build/
+
+# Environment files
+.env
+.next/
+
+yarn.lock
+pnpm-lock.yaml
