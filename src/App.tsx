@@ -261,7 +261,7 @@ const copyTranscription = () => {
           </div>
           <div className="bg-gray-50 rounded-lg p-6">
             <p className="text-gray-600 text-center">
-              {convertedRecipe.split(/(?=\d+\.\d+)/).map((line, index) => (
+              {convertedRecipe.match(/\d+\.\d+.*?(?=\d+\.\d+|$)/gs)?.map((line, index) => (
                 <span key={index}> 
                   {line.trim()}
                   <br />
