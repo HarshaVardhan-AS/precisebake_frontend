@@ -121,6 +121,9 @@ function App() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ recipeText })
             });
+            if (!response.ok) {
+              throw new Error("Backend is still starting up or unavailable.");
+            }
 
             const data = await response.json();
 
